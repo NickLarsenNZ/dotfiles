@@ -1,0 +1,23 @@
+# Ignore everything...
+*
+# ... except the exclusions below whether or not they are in subdirectories
+!*/
+
+# ... except:
+!.gitignore
+
+# and specific app configs
+!alacritty/**
+!bash/**
+!flameshot/**
+!git/config
+!git/gitignore
+!gh/config.yml
+!i3/**
+!i3status-rust/**
+!inputrc
+!k9s/**
+!nvim/**
+!starship.toml
+!zsh/**
+
