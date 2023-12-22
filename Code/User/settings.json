@@ -1,0 +1,15 @@
+{
+    "files.insertFinalNewline": true,
+    "asciidoc.antora.enableAntoraSupport": true,
+    "docker.languageserver.formatter.ignoreMultilineInstructions": true, // stop it autoindenting intentionally indented stuff like the apt install package list
+    "editor.formatOnSave": true,
+    "hediet.vscode-drawio.resizeImages": null,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "rust-analyzer.checkOnSave": true,
+    "rust-analyzer.imports.group.enable": true,
+    "terminal.integrated.allowChords": false, // otherwise I cannot kill pods in k9s
+    "terminal.integrated.enableMultiLinePasteWarning": false,
+    "terminal.integrated.fontFamily": "FiraCode Nerd Font",
+    "window.zoomLevel": 1
+}
