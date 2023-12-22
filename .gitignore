@@ -9,6 +9,8 @@
 # and specific app configs
 !alacritty/**
 !bash/**
+!Code/User/*.json
+!Code/User/snippets/**
 !flameshot/**
 !git/config
 !git/gitignore
