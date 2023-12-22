@@ -1,0 +1,7 @@
+# This file will generally contain files to ignore that are specific to Operating Systems.
+
+.DS_Store
+Thumbs.db
+*.log
+*.bak
+*~

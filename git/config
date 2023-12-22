@@ -1,0 +1,88 @@
+[add.interactive]
+  useBuiltin = false
+
+[alias]
+  amend = commit --amend --no-edit
+
+  # Quick checkout local branch
+  # Not sure why I have to strip 3 characters when there are only 2 (with cut)
+  # Strangely, `cut -c 1-` seems to do the same as `cut -c 2-`
+  # As for all the colourful stuff, that might not be so portable (eg: macos gnu tools need to be prefixed with g if not aliased)
+  co = "!git checkout \"$(git branch | sed -E \"s#([^/]+)/([^/]+)#$(tput setaf 1)\\1/$(tput setaf 6)\\2$(tput sgr0)#\" | fzf --ansi | cut -c 3-)\""
+  cor = "!git checkout --track \"$(git branch --remotes | sed -E \"s#[^[:space:]]+/HEAD -> ##\" | sed -E \"s#([^/]+)/([^/]+)#$(tput setaf 1)\\1/$(tput setaf 6)\\2$(tput sgr0)#\" | fzf --ansi | cut -c 3-)\""
+  frebase = "!git fetch && git rebase origin/main"
+
+  # fancy git log --graph
+  # See https://git-scm.com/docs/pretty-formats
+  graph = log --all --graph --decorate --simplify-by-decoration --oneline --pretty="format:\"%C(auto)%h%d%Creset %C(cyan)(%cr)%Creset %C(green)%cn <%ce> [%G?]%Creset%n%s%n"\"
+
+  # changes since origin/main
+  since = log --graph origin/main..
+
+  # Stach untracked
+
+[commit]
+  gpgsign = true
+
+[core]
+  autocrlf = input
+  editor = nvim
+  excludesFile = "gitignore"
+  pager = delta
+
+[credential]
+  ; helper = "store"
+
+[delta]
+  features = decorations unobtrusive-line-numbers
+  hyperlinks = false
+  light = false
+  line-numbers = true
+  navigate = true
+  side-by-side = true
+
+[delta "decorations"]
+  ; see: https://dandavison.github.io/delta/features-named-groups-of-settings.html
+
+[delta "unobtrusive-line-numbers"]
+  line-numbers = true
+  ; see: https://dandavison.github.io/delta/features-named-groups-of-settings.html
+
+[diff]
+  colorMoved = true
+
+[fetch]
+  prune = true
+
+[ghq]
+;   root = "/home/nick/dev"
+  user = "NickLarsenNZ"
+
+; Add machine/organisaction specific config here, for example
+; credential.helper
+; ghq.root
+; ghq.user
+; user.email
+; user.signingkey
+[include]
+  path = local.gitconfig
+
+[init]
+  defaultBranch = main
+
+[interactive]
+  diffFilter = delta --color-only
+
+[merge]
+  conflictstyle = diff3
+
+[pull]
+  rebase = true
+
+[push]
+  autoSetupRemote = true
+
+[user]
+  ; email = "example@example.com"
+  name = "Nick Larsen"
+  ; signingkey = "ABCDEFG" ; gpg --list-secret-keys --keyid-format=long | grep ssb
