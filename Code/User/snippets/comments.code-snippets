@@ -1,0 +1,23 @@
+{
+	"Add TODO": {
+		"prefix": "todo",
+		"body": [
+			"$LINE_COMMENT TODO${1: (@${2:NickLarsenNZ})}: ${3:Todo}"
+		],
+		"description": "Add TODO"
+	},
+	"Add NOTE": {
+		"prefix": "note",
+		"body": [
+			"$LINE_COMMENT NOTE${1: (@${2:NickLarsenNZ})}: ${3:Note}"
+		],
+		"description": "Add a note"
+	},
+	"Add FIXME": {
+		"prefix": "fixme",
+		"body": [
+			"$LINE_COMMENT FIXME${1: (@${2:NickLarsenNZ})}: ${3:Information}"
+		],
+		"description": "Add a fixme"
+	}
+}
