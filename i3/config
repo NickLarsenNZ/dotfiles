@@ -24,6 +24,7 @@ font pango:monospace 8
 # Start XDG autostart .desktop files using dex. See also
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
+exec --no-startup-id xcompmgr -C & # Bare compositor to allow transparency
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
@@ -204,8 +205,8 @@ smart_gaps on
 smart_borders on
 default_border pixel 5
 
-assign [title="^zoom$"] $ws0
-assign [class="(?i)slack"] $ws0
+# Send messaging apps to ~
+assign [class="^(?i)(slack|element|discord|zoom)$"] $ws0
 
 for_window [class=".blueman-manager-wrapped"] floating enable
 for_window [title="^zoom$"] floating enable
