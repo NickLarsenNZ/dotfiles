@@ -131,6 +131,9 @@ set $ws8 "8"
 set $ws9 "9"
 set $ws10 "10"
 
+
+for_window [workspace=$ws0] layout stacked
+
 # switch to workspace
 bindsym $mod+grave workspace    $ws0
 bindsym $mod+1 workspace number $ws1
@@ -201,9 +204,19 @@ smart_gaps on
 smart_borders on
 default_border pixel 5
 
+assign [title="^zoom$"] $ws0
+assign [class="(?i)slack"] $ws0
+
 for_window [class=".blueman-manager-wrapped"] floating enable
 for_window [title="^zoom$"] floating enable
 for_window [class="^\.arandr-wrapped$"] floating enable
+for_window [window_role="PictureInPicture"] sticky enable
+
+# Float by type
+for_window [window_role="pop-up"] floating enable
+for_window [window_role="task_dialog"] floating enable
+for_window [window_type="dialog"] floating enable
+for_window [window_type="menu"] floating enable
 
 # for_window [urgent="latest" class="firefox"] focus # only works once
 # for_window [urgent="latest"] focus
