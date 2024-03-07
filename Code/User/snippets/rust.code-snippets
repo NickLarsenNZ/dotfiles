@@ -1,0 +1,21 @@
+{
+    "Add test module": {
+        "prefix": "cfg",
+        "scope": "rust",
+        "body": [
+            "#[cfg(test)]",
+            "mod test {",
+            "    use super::*;",
+            "",
+            "    #[test]",
+            "    fn ${1:test_function}() {",
+            "        let expected = ${2:1};",
+            "        let result = ${3:1};",
+            "",
+            "        assert_eq!(expected, result);",
+            "    }",
+            "}"
+        ],
+        "description": "Add test module"
+    }
+}
