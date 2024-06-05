@@ -6,3 +6,6 @@ Thumbs.db
 *.log
 *.bak
 *~
+
+# local scratch directory
+_private/

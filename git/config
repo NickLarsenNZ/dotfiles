@@ -24,12 +24,12 @@
   # Stach untracked
 
 [commit]
-  gpgsign = true
+  gpgSign = true
 
 [core]
   autocrlf = input
   editor = nvim
-  excludesFile = "gitignore"
+  excludesFile = "~/.config/git/gitignore"
   pager = delta
 
 [credential]
@@ -79,12 +79,17 @@
   conflictstyle = diff3
 
 [pull]
-  rebase = true
+ rebase = true
 
 [push]
   autoSetupRemote = true
+
+[tag]
+  gpgSign = true
 
 [user]
   ; email = "example@example.com"
   name = "Nick Larsen"
   ; signingkey = "ABCDEFG" ; gpg --list-secret-keys --keyid-format=long | grep ssb
+[rerere]
+	enabled = true
