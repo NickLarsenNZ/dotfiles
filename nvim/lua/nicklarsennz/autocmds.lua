@@ -7,7 +7,7 @@ vim.api.nvim_create_autocmd("TermOpen", {
 })
 
 -- Go to insert mode for already open terminals
-vim.api.nvim_create_autocmd("BufEnter,BufWinEnter", {
+vim.api.nvim_create_autocmd({"BufEnter", "BufWinEnter"}, {
     pattern = "term://*",
     command = "startinsert"
 })
