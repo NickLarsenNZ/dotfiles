@@ -41,6 +41,8 @@ vim.keymap.set('n', '<C-S-Right>', ':vertical resize +2<CR>')
 
 vim.keymap.set('n', '<leader>tt', ':belowright split | term<CR>')
 
+vim.keymap.set('n', '<C-_>', ':Commentary<CR>') -- comment
+
 ----------------------------
 -- VISUAL ------------------
 ----------------------------
@@ -50,6 +52,7 @@ vim.keymap.set('v', '<Tab>', '>gv') -- indent
 vim.keymap.set('v', '<S-Tab>', '<gv') -- dedent
 vim.keymap.set('v', 'y', 'myy`y') -- stop yank from moving the cursor
 vim.keymap.set('v', 'Y', 'myY`y') -- stop yank from moving the cursor
+vim.keymap.set('v', '<C-_>', ':Commentary<CR><Esc>gv') -- comment
 
 ----------------------------
 -- TERMINAL ----------------
