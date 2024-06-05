@@ -44,10 +44,10 @@ vim.keymap.set('n', '<leader>tt', ':belowright split | term<CR>')
 ----------------------------
 -- VISUAL ------------------
 ----------------------------
-vim.keymap.set('v', '<S-Up>',   ":m '<-2<CR>gv=gv") -- move selection up
-vim.keymap.set('v', '<S-Down>', ":m '>+1<CR>gv=gv") -- move selection down
-vim.keymap.set('v', '<', '<gv') -- indent
-vim.keymap.set('v', '>', '>gv') -- dedent
+vim.keymap.set('v', '<S-Up>',   ":m '<-2<CR><Esc>gv=gv") -- move selection up
+vim.keymap.set('v', '<S-Down>', ":m '>+1<CR><Esc>gv=gv") -- move selection down
+vim.keymap.set('v', '<Tab>', '>gv') -- indent
+vim.keymap.set('v', '<S-Tab>', '<gv') -- dedent
 vim.keymap.set('v', 'y', 'myy`y') -- stop yank from moving the cursor
 vim.keymap.set('v', 'Y', 'myY`y') -- stop yank from moving the cursor
 
