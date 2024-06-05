@@ -25,6 +25,7 @@ font pango:monospace 8
 # https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 exec --no-startup-id xcompmgr -C & # Bare compositor to allow transparency
+exec --no-startup-id feh --bg-scale ~/Pictures/176221-orange-design-daytime-nature-azure-3840x2160.jpg
 
 # The combination of xss-lock, nm-applet and pactl is a popular choice, so
 # they are included here as an example. Modify as you see fit.
