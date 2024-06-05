@@ -208,6 +208,7 @@ default_border pixel 5
 
 # Send messaging apps to ~
 assign [class="^(?i)(slack|element|discord|zoom)$"] $ws0
+assign [class="^(?i)(firefox)$"] $ws1
 
 for_window [class=".blueman-manager-wrapped"] floating enable
 for_window [title="^zoom$"] floating enable
@@ -224,6 +225,10 @@ for_window [window_type="menu"] floating enable
 # for_window [urgent="latest"] focus
 force_display_urgency_hint 1000 ms
 focus_on_window_activation focus # smart|urgent|focus|none
+
+exec --no-startup-id blueman-manager
+exec --no-startup-id slack
+exec --no-startup-id firefox
 
 bindsym $mod+Shift+l exec --no-startup-id dm-tool lock
 bindsym --release $mod+l exec --no-startup-id xcolor -s clipboard
