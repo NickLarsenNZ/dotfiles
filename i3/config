@@ -249,6 +249,7 @@ bar {
         font pango:DejaVu Sans Mono, FontAwesome 13
         height 22
         status_command i3status-rs
+        tray_output primary
         colors {
                 separator #666666
                 background #222222
