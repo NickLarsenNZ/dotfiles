@@ -56,6 +56,19 @@ bindsym XF86AudioMicMute exec --no-startup-id pactl set-source-mute @DEFAULT_SOU
 bindsym XF86AudioPlay exec --no-startup-id playerctl play-pause && $refresh_i3status
 bindsym XF86AudioNext exec --no-startup-id playerctl next && $refresh_i3status
 
+# bindsym XF86Display
+# bindsym XF86WLAN
+# bindsym XF86Messenger
+
+# change bluetooth headphones modes
+bindsym XF86Go exec --no-startup-id pacmd set-card-profile bluez_card.38_18_4C_BD_1B_16 handsfree_head_unit
+bindsym Cancel exec --no-startup-id pacmd set-card-profile bluez_card.38_18_4C_BD_1B_16 a2dp_sink
+
+# bindsym XF86Favorites
+# bindsym XF86Calculator
+# bindsym XF86Sleep
+# bindsym XF86Launch2 (Fn+PrtSc)
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
