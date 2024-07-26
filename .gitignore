@@ -20,6 +20,7 @@
 !inputrc
 !k9s/**
 !nvim/**
+!ripgreprc
 !starship.toml
 !zsh/**
 

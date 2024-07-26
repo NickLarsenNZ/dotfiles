@@ -1,0 +1,5 @@
+# vim: syntax=sh
+# Set RIPGREP_CONFIG_PATH=~/.config/ripgreprc
+--color=always
+--heading
+--line-number
