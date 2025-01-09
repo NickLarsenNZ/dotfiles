@@ -1,5 +1,7 @@
 # vim: syntax=sh
 # Set RIPGREP_CONFIG_PATH=~/.config/ripgreprc
---color=always
---heading
+# --no-heading
 --line-number
+
+--glob
+!*.svg
