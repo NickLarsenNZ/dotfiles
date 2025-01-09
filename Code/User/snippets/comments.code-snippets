@@ -2,22 +2,36 @@
 	"Add TODO": {
 		"prefix": "todo",
 		"body": [
-			"$LINE_COMMENT TODO${1: (@${2:NickLarsenNZ})}: ${3:Todo}"
+			"$LINE_COMMENT TODO (@NickLarsenNZ): ${1:Note}"
 		],
-		"description": "Add TODO"
+		"description": "Add a todo"
 	},
 	"Add NOTE": {
 		"prefix": "note",
 		"body": [
-			"$LINE_COMMENT NOTE${1: (@${2:NickLarsenNZ})}: ${3:Note}"
+			"$LINE_COMMENT NOTE (@NickLarsenNZ): ${1:Note}"
 		],
 		"description": "Add a note"
 	},
 	"Add FIXME": {
 		"prefix": "fixme",
 		"body": [
-			"$LINE_COMMENT FIXME${1: (@${2:NickLarsenNZ})}: ${3:Information}"
+			"$LINE_COMMENT FIXME (@NickLarsenNZ): ${1:Note}"
 		],
 		"description": "Add a fixme"
+	},
+	"Add WARNING": {
+		"prefix": "warning",
+		"body": [
+			"$LINE_COMMENT WARNING (@NickLarsenNZ): ${1:Note}"
+		],
+		"description": "Add a warning"
+	},
+	"Add IMPORTANT": {
+		"prefix": "important",
+		"body": [
+			"$LINE_COMMENT IMPORTANT (@NickLarsenNZ): ${1:Note}"
+		],
+		"description": "Add an important note"
 	}
 }
