@@ -40,9 +40,18 @@ block = "sound"
 button = "left"
 cmd = "pavucontrol"
 
+# headset
 [[block]]
 block = "bluetooth"
 mac = "38:18:4C:BD:1B:16"
+merge_with_next = true
+if_command = "bluetoothctl devices Connected | grep 38:18:4C:BD:1B:16"
+
+# speaker
+[[block]]
+block = "bluetooth"
+mac = "10:28:74:D9:4E:E5"
+if_command = "bluetoothctl devices Connected | grep 10:28:74:D9:4E:E5"
 
 [[block]]
 block = "time"
