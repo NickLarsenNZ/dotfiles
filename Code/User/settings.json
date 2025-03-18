@@ -33,7 +33,7 @@
     "scm.diffDecorationsIgnoreTrimWhitespace": "true",
     "window.zoomLevel": 0,
     "editor.renderWhitespace": "all",
-    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.ignoreTrimWhitespace": false,
     "better-comments.tags": [
         {
             "tag": "!",
@@ -93,7 +93,7 @@
     "ruff.nativeServer": true,
     "ruff.showNotifications": "onWarning",
     "[yaml]": {
-        "diffEditor.ignoreTrimWhitespace": true
+        "diffEditor.ignoreTrimWhitespace": false
     },
     "editor.minimap.enabled": false,
     "debug.allowBreakpointsEverywhere": true,
@@ -111,5 +111,7 @@
     "rust-analyzer.cargo.targetDir": ".ra",
     "editor.inlayHints.enabled": "onUnlessPressed",
     "git.closeDiffOnOperation": true,
-    "terminal.integrated.stickyScroll.enabled": true
+    "terminal.integrated.stickyScroll.enabled": true,
+    "git.openRepositoryInParentFolders": "always",
+    "git.autoRepositoryDetection": false,
 }
