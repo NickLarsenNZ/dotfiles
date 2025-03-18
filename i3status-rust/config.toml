@@ -13,6 +13,14 @@ bat = ["|E|", "|_|", "|=|", "|F|"]
 bat_charging = "|^| "
 
 [[block]]
+block = "custom"
+command = "echo \uf030" # assumes fontawesome icons
+interval = "once"
+[[block.click]]
+button = "left"
+cmd = "flameshot gui --delay 2000"
+
+[[block]]
 block = "music"
 format = " $icon {$combo.str(max_w:40,rot_interval:0.5) $play $next |}"
 
