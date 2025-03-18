@@ -9,3 +9,6 @@ Thumbs.db
 
 # local scratch directory
 _private/
+
+.ra/
+.direnv/
