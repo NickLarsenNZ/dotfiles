@@ -1,0 +1,15 @@
+{
+    "Begin a bash script": {
+        "prefix": "shebang",
+        "body": [
+            "#!/usr/bin/env bash",
+            "set -euo pipefail",
+            "",
+            "# Given ${1:...}",
+            "",
+            "${2}",
+            ""
+        ],
+        "description": "Begin a bash script"
+    }
+}

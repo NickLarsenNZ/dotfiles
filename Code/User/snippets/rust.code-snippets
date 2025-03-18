@@ -1,6 +1,6 @@
 {
     "Add test module": {
-        "prefix": "cfg",
+        "prefix": "test",
         "scope": "rust",
         "body": [
             "#[cfg(test)]",

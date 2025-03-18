@@ -1,0 +1,33 @@
+{
+    "Containerfile template": {
+        "prefix": "container",
+        "body": [
+            "ARG VERSION",
+            "FROM ${1:example}:$VERSION",
+            "",
+            "# OpenContainer Annotations",
+            "# See https://github.com/opencontainers/image-spec/blob/v1.0/annotations.md",
+            "LABEL org.opencontainers.image.title=\"${2:Human-readable title of the image}\"",
+            "LABEL org.opencontainers.image.description=\"${3:Human-readable description of the software packaged in the image}\"",
+            "LABEL org.opencontainers.image.authors=\"${4:@NickLarsenNZ}\"",
+            "LABEL org.opencontainers.image.vendor=\"${4:@NickLarsenNZ}\"",
+            "LABEL org.opencontainers.image.licenses=\"${5:License(s) under which contained software is distributed as an SPDX License Expression}\"",
+            "LABEL org.opencontainers.image.url=\"${6:URL to find more information on the image}\"",
+            "LABEL org.opencontainers.image.documentation=\"${6:URL to get documentation on the image}\"",
+            "LABEL org.opencontainers.image.source=\"https://github.com/${7:NickLarsenNZ}/${8:repo}\"",
+            "",
+            "SHELL [\"/bin/bash\", \"-euo\", \"pipefail\", \"-c\"]",
+            "",
+            "WORKDIR /app",
+            "",
+            "COPY . .",
+            "",
+            "RUN ${9:echo hello-world}",
+            "",
+            "ENTRYPOINT [ \"/usr/local/bin/${10:foo}\" ]",
+            "",
+            "CMD [ ${11:\"\"} ]"
+        ],
+        "description": "Containerfile template"
+    }
+}
