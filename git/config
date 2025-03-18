@@ -23,8 +23,15 @@
 
   # Stach untracked
 
+[branch]
+  sort = -committerdate
+
+[column]
+  ui = auto
+
 [commit]
   gpgSign = true
+  verbose = true
 
 [core]
   autocrlf = input
@@ -51,10 +58,15 @@
   ; see: https://dandavison.github.io/delta/features-named-groups-of-settings.html
 
 [diff]
-  colorMoved = true
+  algorithm = histogram
+  colorMoved = plain
+  mnemonicPrefix = true
+  renames = true
 
 [fetch]
   prune = true
+  pruneTags = true
+  all = true
 
 [ghq]
 ;   root = "/home/nick/dev"
@@ -66,6 +78,10 @@
 ; ghq.user
 ; user.email
 ; user.signingkey
+
+[help]
+  autocorrect = prompt
+
 [include]
   path = local.gitconfig
 
@@ -76,15 +92,25 @@
   diffFilter = delta --color-only
 
 [merge]
-  conflictstyle = diff3
+  conflictstyle = zdiff3
 
 [pull]
  rebase = true
 
 [push]
+  default = simple
   autoSetupRemote = true
 
+[rebase]
+  autoStash = true
+  updateRefs = true
+
+[rerere]
+  enabled = true
+  autoupdate = true
+
 [tag]
+  sort = version:refname
   gpgSign = true
 
 [user]
