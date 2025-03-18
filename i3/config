@@ -250,7 +250,6 @@ focus_on_window_activation focus # smart|urgent|focus|none
 
 exec --no-startup-id blueman-manager
 exec --no-startup-id slack
-exec --no-startup-id zoom-us
 exec --no-startup-id firefox
 
 bindsym $mod+Shift+l exec --no-startup-id dm-tool lock
